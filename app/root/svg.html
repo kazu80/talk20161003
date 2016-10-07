@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://agorbatchev.typepad.com/pub/sh/3_0_83/styles/shCoreDefault.css">
+    <link rel="stylesheet" href="asset/css/main.css">
+
+    <style>
+        svg {
+            stroke                    : #ff0000;
+            stroke-width              : 2px;
+            fill                      : #ffffff;
+            stroke-linecap            : round;
+            stroke-dasharray          : 100 125;
+            stroke-dashoffset         : 100;
+
+            animation-name            : dash;
+            animation-duration        : 5s;
+            animation-timing-function : linear;
+            animation-iteration-count : infinite;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset : 1100;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container" style="margin-top: 20px">
+
+    <svg width="400px" height="400px" viewBox="0 0 200 200">
+        <polygon points="100,10, 30,180, 190,70, 10,70, 170,180"></polygon>
+    </svg>
+
+
+    <pre class="brush: xhtml;">
+        &lt;svg width="400px" height="400px" viewBox="0 0 200 200"&gt;
+            &lt;polygon points="100,10, 30,180, 190,70, 10,70, 170,180"&gt;&lt;/polygon&gt;
+        &lt;/svg&gt;
+    </pre>
+
+    <pre class="brush: css">
+
+        svg {
+            stroke                    : #ff0000;
+            stroke-width              : 2px;
+            fill                      : #ffffff;
+            stroke-linecap            : round;
+            stroke-dasharray          : 100 125;
+            stroke-dashoffset         : 100;
+
+            animation-name            : dash;
+            animation-duration        : 5s;
+            animation-timing-function : linear;
+            animation-iteration-count : infinite;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset : 1100;
+            }
+        }
+
+    </pre>
+
+</div>
+
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js"></script>
+<script>
+    function path () {
+        var args = arguments,
+                result = []
+                ;
+
+        for (var i = 0; i < args.length; i++)
+            result.push (args[i].replace ('@', 'http://alexgorbatchev.com/pub/sh/current/scripts/'));
+
+        return result
+    }
+
+    SyntaxHighlighter.autoloader.apply (null, path (
+            'applescript            @shBrushAppleScript.js',
+            'actionscript3 as3      @shBrushAS3.js',
+            'bash shell             @shBrushBash.js',
+            'coldfusion cf          @shBrushColdFusion.js',
+            'cpp c                  @shBrushCpp.js',
+            'c# c-sharp csharp      @shBrushCSharp.js',
+            'css                    @shBrushCss.js',
+            'delphi pascal          @shBrushDelphi.js',
+            'diff patch pas         @shBrushDiff.js',
+            'erl erlang             @shBrushErlang.js',
+            'groovy                 @shBrushGroovy.js',
+            'java                   @shBrushJava.js',
+            'jfx javafx             @shBrushJavaFX.js',
+            'js jscript javascript  @shBrushJScript.js',
+            'perl pl                @shBrushPerl.js',
+            'php                    @shBrushPhp.js',
+            'text plain             @shBrushPlain.js',
+            'py python              @shBrushPython.js',
+            'ruby rails ror rb      @shBrushRuby.js',
+            'sass scss              @shBrushSass.js',
+            'scala                  @shBrushScala.js',
+            'sql                    @shBrushSql.js',
+            'vb vbnet               @shBrushVb.js',
+            'xml xhtml xslt html    @shBrushXml.js'
+    ));
+    SyntaxHighlighter.all ();
+</script>
+</body>
+</html>

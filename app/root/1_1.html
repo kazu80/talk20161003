@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="asset/css/main.css">
+    <style>
+
+        .thumbnail {
+            position: relative;
+            opacity: 1;
+
+            transition-property: opacity;
+            transition-duration: 3s;
+            transition-timing-function: cubic-bezier(0, 2.06, 1, -1.36);
+        }
+
+        .thumbnail:hover {
+            animation-duration: 3s;
+            animation-name: foo;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            opacity: 0;
+        }
+
+        @keyframes foo {
+            from {
+                left: -100px;
+            }
+
+            50% {
+                left: 0;
+            }
+
+            to {
+                left: 100px;
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="container" style="margin-top: 100px">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/asset/js/main.js"></script>
+</body>
+</html>

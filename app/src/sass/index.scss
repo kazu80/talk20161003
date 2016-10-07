@@ -1,0 +1,7 @@
+/**
+ * webpack でfontsファイルを読みこませる。
+ * なので、bundle.jsを読みこませる事が必須
+ */
+$icon-font-path: "../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="asset/css/main.css">
+    <style>
+
+        .click {
+            animation-name: click;
+            animation-duration: 400ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes click {
+            from {
+
+            }
+
+            25% {
+                transform: scale(0.8);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .btn-default {
+            transition-duration: 1000ms;
+            transition-timing-function: cubic-bezier(0.36, -0.64, 0.34, 1.76);
+        }
+
+        .btn-default:hover {
+            transform: scale(1.5);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container" style="margin-top: 20px">
+    <div class="page-header">
+        <h2>押し潰しと伸縮</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="thumbnail transition">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p>
+                        <a href="#" id="btn" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/asset/js/main.js"></script>
+<script>
+
+    var btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function () {
+        this.classList.add('click');
+    });
+
+    btn.addEventListener('animationend', function () {
+        this.classList.remove('click');
+    })
+
+</script>
+
+
+</body>
+</html>
