@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="asset/css/main.css">
+    <link rel="stylesheet" href="http://agorbatchev.typepad.com/pub/sh/3_0_83/styles/shCoreDefault.css">
+    <style>
+        .transition {
+            will-change                : transform, border, box-shadow;
+
+            transition-duration        : 400ms;
+            transition-property        : transform, border, box-shadow;
+            transition-timing-function : ease;
+        }
+
+        .transition:hover {
+            transform  : scale(1.03, 1.03);
+            border     : 1px gold solid;
+            box-shadow : 10px 10px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .animation:hover {
+            animation-duration        : 400ms;
+            animation-name            : foo;
+            animation-timing-function : ease;
+            animation-fill-mode       : both;
+        }
+
+        @keyframes foo {
+            from {
+            }
+
+            to {
+                transform  : scale(1.03, 1.03);
+                border     : 1px gold solid;
+                box-shadow : 10px 10px 10px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        .shadow {
+            animation-duration        : 1000ms;
+            animation-name            : shadow;
+            animation-iteration-count : infinite;
+            animation-timing-function : ease-in;
+        }
+
+        @keyframes shadow {
+            from {
+
+            }
+
+            25%, 75% {
+                box-shadow : 0px 0px 20px rgba(255, 41, 6, 0.8);
+            }
+
+            50% {
+                box-shadow : 0px 0px 40px rgb(255, 0, 6);
+            }
+
+            to {
+
+            }
+        }
+
+        .rotate {
+            animation-duration        : 3000ms;
+            animation-name            : rotate;
+            animation-iteration-count : infinite;
+            animation-timing-function : linear;
+        }
+
+        @keyframes rotate {
+            from {
+
+            }
+
+            to {
+                transform : rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container" style="margin-top: 20px">
+    <div class="page-header">
+        <h2>transition</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="thumbnail transition">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea
+                        lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta
+                        and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail transition">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea
+                        lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta
+                        and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail transition">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea
+                        lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta
+                        and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail transition">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea
+                        lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta
+                        and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <pre class="brush: css">
+                .transition {
+                  transition-duration: 400ms;
+                  transition-property: transform, border, box-shadow;
+                  transition-timing-function: ease;
+                }
+
+                .transition:hover {
+                  transform: scale(1.03, 1.03);
+                  border: 1px gold solid;
+                  box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+                }
+            </pre>
+        </div>
+    </div>
+    <div class="page-header">
+        <h2>animation</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="thumbnail animation">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea
+                        lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta
+                        and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail animation">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea
+                        lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta
+                        and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail shadow">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea
+                        lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta
+                        and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail animation">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea
+                        lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta
+                        and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+        <pre class="brush: css">
+            .shadow {
+              animation-duration: 1000ms;
+              animation-name: shadow;
+              animation-iteration-count: infinite;
+              animation-timing-function: ease-in;
+            }
+
+            @keyframes shadow {
+              from {
+
+              }
+
+              25%, 75% {
+                box-shadow: 0px 0px 20px rgba(255, 41, 6, 0.8);
+              }
+
+              50% {
+                box-shadow: 0px 0px 40px rgb(255, 0, 6);
+              }
+
+              to {
+
+              }
+            }
+        </pre>
+    </div>
+</div>
+
+
+<script src="/asset/js/main.js"></script>
+
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js"></script>
+<script>
+    function path () {
+        var args = arguments,
+                result = []
+                ;
+
+        for (var i = 0; i < args.length; i++)
+            result.push (args[i].replace ('@', 'http://alexgorbatchev.com/pub/sh/current/scripts/'));
+
+        return result
+    }
+
+    SyntaxHighlighter.autoloader.apply (null, path (
+            'applescript            @shBrushAppleScript.js',
+            'actionscript3 as3      @shBrushAS3.js',
+            'bash shell             @shBrushBash.js',
+            'coldfusion cf          @shBrushColdFusion.js',
+            'cpp c                  @shBrushCpp.js',
+            'c# c-sharp csharp      @shBrushCSharp.js',
+            'css                    @shBrushCss.js',
+            'delphi pascal          @shBrushDelphi.js',
+            'diff patch pas         @shBrushDiff.js',
+            'erl erlang             @shBrushErlang.js',
+            'groovy                 @shBrushGroovy.js',
+            'java                   @shBrushJava.js',
+            'jfx javafx             @shBrushJavaFX.js',
+            'js jscript javascript  @shBrushJScript.js',
+            'perl pl                @shBrushPerl.js',
+            'php                    @shBrushPhp.js',
+            'text plain             @shBrushPlain.js',
+            'py python              @shBrushPython.js',
+            'ruby rails ror rb      @shBrushRuby.js',
+            'sass scss              @shBrushSass.js',
+            'scala                  @shBrushScala.js',
+            'sql                    @shBrushSql.js',
+            'vb vbnet               @shBrushVb.js',
+            'xml xhtml xslt html    @shBrushXml.js'
+    ));
+    SyntaxHighlighter.all ();
+</script>
+
+
+</body>
+</html>

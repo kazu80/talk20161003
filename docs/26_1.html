@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="asset/css/main.css">
+    <style>
+
+        .list-group-item {
+            height : 60px;
+        }
+
+        .area {
+            position                  : relative;
+            top                       : 60px;
+
+            animation-name            : area;
+            animation-duration        : 5000ms;
+            animation-timing-function : linear;
+            animation-fill-mode       : forwards;
+        }
+
+        @keyframes area {
+            from {
+                transform : translateY(0px);
+            }
+
+            70% {
+                transform : translateY(0px);
+            }
+
+            80% {
+                transform : translateY(-60px) scale(1);
+            }
+
+            to {
+                transform : translateY(-60px);
+            }
+        }
+
+        .action {
+            position                  : relative;
+            right                     : -800px;
+            opacity                   : 0;
+
+            animation-name            : action;
+            animation-duration        : 5000ms;
+            animation-timing-function : linear;
+            animation-fill-mode       : forwards;
+        }
+
+        @keyframes action {
+
+            from {
+
+            }
+
+            10% {
+                opacity   : 1;
+                transform : translateX(0);
+            }
+
+            40% {
+                transform : translateX(-400px);
+            }
+
+            45% {
+                transform : translateX(-400px);
+            }
+
+            48% {
+                transform : translateX(-400px) scale(1.5);
+            }
+
+            51% {
+                transform : translateX(-400px) scale(1);
+            }
+
+            53% {
+                transform : translateX(-400px) scale(1.5);
+            }
+
+            55% {
+                transform : translateX(-400px) scale(1);
+            }
+
+            90% {
+                transform : translateX(-400px);
+            }
+
+            to {
+                opacity   : 1;
+                transform : translateX(-800px);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container" style="margin-top: 20px">
+    <div class="page-header">
+        <h2>副次アクション</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-success area">2016.01.02 Dapibus ac facilisis in</li>
+                <li class="list-group-item list-group-item-info area">2016.02.12 Cras sit amet nibh libero</li>
+                <li class="list-group-item list-group-item-warning area">2016.04.21 Porta ac consectetur ac</li>
+                <li class="list-group-item list-group-item-danger action">2016.05.03 [new] Vestibulum at eros</li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="/asset/js/main.js"></script>
+<script>
+
+    var btn = document.getElementById ('btn');
+
+    btn.addEventListener ('click', function () {
+        this.classList.remove ('click');
+        this.classList.add ('click');
+    });
+
+    btn.addEventListener ('animationend', function () {
+
+    })
+
+</script>
+
+
+</body>
+</html>

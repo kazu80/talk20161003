@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="asset/css/main.css">
+
+    <style>
+        .straight {
+
+            animation-duration        : 3s;
+            animation-name            : robot;
+            animation-timing-function : linear;
+            animation-fill-mode       : forwards;
+            animation-iteration-count : infinite;
+        }
+
+        @keyframes straight {
+            from {
+
+            }
+
+            40% {
+                transform : rotate(40deg);
+            }
+
+            80% {
+                transform : rotate(40deg) translate(-200px, 150px);
+            }
+
+            to {
+                transform : translate(-200px, 0);
+            }
+        }
+
+        @keyframes foo {
+            to {
+
+            }
+
+            20%, 30% {
+                transform : scaleY(-1);
+            }
+
+            50%, 60% {
+                transform : scale(0);
+            }
+
+            70%, 80% {
+                transform : scaleX(-1);
+            }
+
+            from {
+
+            }
+        }
+
+        @keyframes robot {
+            from {
+
+            }
+
+            25% {
+                transform : rotate(25deg);
+            }
+
+            75% {
+                transform : rotate(-25deg);
+            }
+
+            to {
+
+            }
+        }
+
+        .step_frame:hover {
+            animation-duration        : 3s;
+            animation-name            : steps;
+            animation-timing-function : steps(7);
+            animation-fill-mode       : forwards;
+            animation-iteration-count : infinite;
+        }
+
+        @keyframes steps {
+            from {
+                background-position : -500px 0;
+            }
+
+            to {
+                background-position : 0 0;
+            }
+        }
+
+        .step_frame {
+            display           : block;
+            max-width         : 100%;
+            margin-left       : auto;
+            margin-right      : auto;
+
+            width             : calc(500px / 7);
+            height            : calc(248px / 2);
+
+            background-image  : url(/asset/img/pic_02.jpg);
+            background-repeat : no-repeat;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" style="margin-top: 20px">
+    <div class="page-header">
+        <h2>逐次</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3 ">
+            <div class="thumbnail straight">
+                <img src="asset/img/pic_01.jpg" alt="">
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea
+                        lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta
+                        and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-header">
+        <h2>animation-timing-function: step</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="step_frame steps"></div>
+                <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>
+                        Try decorating the tea lentils with sticky ricotta and milk, cooked.Try decorating the tea
+                        lentils with sticky ricotta and milk, cooked.Try decorating the tea lentils with sticky ricotta
+                        and milk, cooked.Try decorating the tea lentils with sticky ricotta and milk, cooked.
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-primary" role="button">Button</a>
+                        <a href="#" class="btn btn-default" role="button">Button</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/asset/js/main.js"></script>
+<script>
+
+    var btn = document.getElementById ('btn');
+
+    btn.addEventListener ('click', function () {
+        this.classList.remove ('click');
+        this.classList.add ('click');
+    });
+
+    btn.addEventListener ('animationend', function () {
+
+    })
+
+</script>
+
+
+</body>
+</html>
